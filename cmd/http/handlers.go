@@ -78,6 +78,10 @@ func pageHandler(w http.ResponseWriter, r *http.Request) {
 	tmpl.ExecuteTemplate(w, "base", data)
 }
 
+func cvHandler(w http.ResponseWriter, r *http.Request) {
+	http.ServeFile(w, r, filepath.Join(staticDir, "files", "cv.pdf"))
+}
+
 func faviconHandler(w http.ResponseWriter, r *http.Request) {
 	http.ServeFile(w, r, filepath.Join(staticDir, "favicon.ico"))
 }

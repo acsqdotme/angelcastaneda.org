@@ -19,6 +19,7 @@ func main() {
 	fileServer := http.FileServer(http.Dir("./static"))
 	mux.Handle("/static/", http.StripPrefix("/static", fileServer))
 	mux.HandleFunc("/favicon.ico", faviconHandler)
+	mux.HandleFunc("/cv", cvHandler)
 
 	log.Println("Starting server on port ", *addr)
 	err := http.ListenAndServe(*addr, mux)
