@@ -1,0 +1,35 @@
+{{ define "base" }}
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Angel Castaneda">
+    <meta name="description" content="Angel's Portfolio Site">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://acsq.me{{ .Path }}">
+    <title>{{ template "title" . }} - Ángel Castañeda</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="icon" href="/favicon.ico">
+  </head> 
+  <body>
+    <header>
+      {{ block "header" . }}
+      <h1>
+        <a href="/">AC^2</a>
+      </h1>
+      {{ end }}
+    </header>
+    <main>
+      {{ template "main" . }}
+    </main>
+    <footer>
+    {{ block "footer" . }}
+        <a href="/about">About</a>
+        <a href="/cv">Résumé</a>
+        <a href="/contact">Contact</a>
+    {{ end }}
+    </footer>
+  </body>
+</html>
+{{ end }}
