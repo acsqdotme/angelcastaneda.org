@@ -1,0 +1,333 @@
+/* @font-face { */
+/*   font-family: 'IBMPlexMono'; */
+/*   src:  */
+/*     local('IBM Plex Mono Regular'), */
+/*     url('/static/fonts/IBMPlexMono-Regular.woff') format('woff'); */
+/*   font-weight: normal; */
+/*   font-style: normal; */
+/* } */
+
+/* @font-face { */
+/*   font-family: 'IBMPlexMono'; */
+/*   src:  */
+/*     local('IBM Plex Mono Italic'), */
+/*     url('/static/fonts/IBMPlexMono-Italic.woff') format('woff'); */
+/*   font-weight: normal; */
+/*   font-style: italic; */
+/* } */
+
+/* @font-face { */
+/*   font-family: 'IBMPlexMono'; */
+/*   src:  */
+/*     local('IBM Plex Mono Bold'), */
+/*     url('/static/fonts/IBMPlexMono-Bold.woff') format('woff'); */
+/*   font-weight: bold; */
+/*   font-style: normal; */
+/* } */
+
+/* @font-face { */
+/*   font-family: 'IBMPlexMono'; */
+/*   src:  */
+/*     local('IBM Plex Mono Bold Italic'), */
+/*     url('/static/fonts/IBMPlexMono-BoldItalic.woff') format('woff'); */
+/*   font-weight: bold; */
+/*   font-style: italic; */
+/* } */
+
+:root {
+  --body-color: #000000;
+  --bg-color: #FFFFFF;
+  --hyperblue: #005F87;
+  --hoverorange: #D75F00;
+  --bg-code: #06363b;
+}
+
+@media (prefers-color-scheme:dark) {
+  :root {
+    --bg-color: #001A1E;
+    --body-color: #FFFFFF;
+    --hyperblue: #7DCEF0;
+    --hoverorange: #FF7100;
+  }
+}
+
+body {
+  font-family: IBMPlexMono, monospace;
+  font-size: max(14pt, 100%);
+  max-width: 700px;
+  margin: 0.7em auto;
+  background-color: var(--bg-color);
+  color: var(--body-color);
+  padding: 0 1em;
+  line-height: 1.4;
+}
+
+img {
+  max-width: 90%;
+  height: auto;
+  display: block;
+  margin: 0em auto;
+}
+
+li * {
+  vertical-align: text-top;
+}
+
+p {
+  text-align: justify;
+}
+
+figure {
+  margin: 1em auto;
+}
+
+.code { /* really gotta get syntax highlighting */
+  color: #FFFFFF;
+  font-size: 0.7em;
+  margin: 1em;
+  padding: 0.5em;
+  background: var(--bg-code);
+  border: 2px solid grey;
+  border-radius: 5px;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* pre.code {
+  white-space: pre-wrap;       
+  white-space: -moz-pre-wrap;  
+  white-space: -pre-wrap;      
+  white-space: -o-pre-wrap;    
+  word-wrap: break-word;       
+}*/ 
+
+details p {
+  margin: 0em;
+}
+
+address {
+  font-style: normal;
+  display: inline;
+}
+
+footer a {
+  font-weight: bold;
+}
+
+article time {
+  text-align: right;
+  display: block;
+  font-style: italic;
+}
+
+.inline {
+  display: inline;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.no-top {
+  margin-top: 0em;
+}
+
+.centered {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+ul.centered {
+  display: table;
+  padding-left: 0em;
+}
+
+.buttons * {
+  margin: 0 auto;
+}
+
+.buttons img {
+  margin: 0 0;
+  display: inline-block;
+}
+
+.buttons {
+  max-width: 400px;
+  margin: 0em;
+}
+
+.bookcover {
+  width: 20%;
+  min-width: 100px;
+  height: auto;
+  float: right;
+  margin: 0em;
+  padding: 0em;
+  margin-left: 1em;
+}
+
+.pfp {
+  width: 20%;
+  min-width: 90px;
+  height: auto;
+  float: left;
+  margin: 0em 1em;
+  padding: 0em;
+}
+
+.pfp img {
+  border: 1.5px solid #777;
+}
+
+.pfp figcaption {
+  font-size: 0.9em;
+}
+
+.loc {
+  width: 25%;
+}
+
+figcaption, .center {
+  text-align: center;
+}
+
+.block {
+  display: block;
+}
+
+.double {
+  display: flex;
+  column-gap: 0em;
+  flex-direction: row;
+}
+
+.pane {
+  flex: 1 1 0;
+}
+
+table.favicon {
+  margin: 0em auto;
+}
+
+table.favicon img, img.favicon {
+  width: 1.6em;
+  height: auto;
+  display: inline;
+}
+
+.right {
+  text-align: right;
+}
+
+::-moz-selection {
+  background: var(--hyperblue);
+  color: var(--bg-color);
+}
+
+/* this will only work separated for some reason... */
+::selection { 
+  background: var(--hyperblue);
+  color: var(--bg-color);
+}
+
+a:link, a:visited  {
+/*  text-decoration: none;*/
+  color: var(--hyperblue);
+}
+
+a:active, a:hover  {
+  text-decoration: underline;
+  color: var(--hoverorange);
+}
+
+.library em, .todo s, .hl {
+  color: var(--hoverorange);
+}
+
+.rss h2 {
+  display: inline-block;
+  margin-right: 0.2em;
+}
+
+.rss img, .favicon img {
+  width: 0.8em;
+  height: auto;
+  display: inline;
+}
+
+.friend {
+  margin: 1em 0;
+}
+
+.friend h4 {
+  display: inline;
+  margin-right: 0.2em;
+  text-decoration: underline;
+}
+
+.friend p {
+  margin-top: 0em;
+}
+
+.friend a, .buttons a {
+  text-decoration: none;
+}
+
+.tags {
+  margin: 1em auto;
+}
+
+.tags > * {
+  display: block;
+  text-align: center;
+  margin: 0em auto;
+}
+
+.filter .tags {
+  margin: 0em 0em 0em 40px;
+}
+
+.filter .tags * {
+  text-align: left;
+}
+
+.textlogo {
+  max-height: 2em;
+  max-width: 2em;
+  vertical-align: middle;
+  display: inline;
+}
+
+.mobile {
+  display: none;
+}
+
+@media only screen and (max-width:650px) {
+  .double {
+    flex-direction: column;
+  }
+  .mobile {
+    display: block;
+  }  
+  .bookcover, .pfp, .loc {
+    float: none;
+    margin: 1em auto;
+    width: 60%;
+  }
+  .loc {
+    width: 75%;
+  }
+  .filter .tags {
+    margin: 0 auto;
+  }
+  .filter .tags * {
+    text-align: center;
+  }
+  .buttons {
+    margin: 0 auto;
+    text-align: center;
+  }
+  ul {
+    padding-left: 20px;
+  }
+}
