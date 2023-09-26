@@ -78,6 +78,10 @@ func pageHandler(w http.ResponseWriter, r *http.Request) {
 	tmpl.ExecuteTemplate(w, "base", data)
 }
 
+func cbtsHandler(w http.ResponseWriter, r *http.Request) {
+	http.ServeFile(w, r, filepath.Join(staticDir, "files", "the_claim_before_the_storm.pdf"))
+}
+
 func cvHandler(w http.ResponseWriter, r *http.Request) {
 	http.ServeFile(w, r, filepath.Join(staticDir, "files", "cv.pdf"))
 }
