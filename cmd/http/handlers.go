@@ -82,6 +82,11 @@ func cbtsHandler(w http.ResponseWriter, r *http.Request) {
 	http.ServeFile(w, r, filepath.Join(staticDir, "files", "the_claim_before_the_storm.pdf"))
 }
 
+func pgpHandler(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "text/plain; charset=utf-8")
+	http.ServeFile(w, r, filepath.Join(staticDir, "files", "angelcastaneda.asc"))
+}
+
 func cvHandler(w http.ResponseWriter, r *http.Request) {
 	http.ServeFile(w, r, filepath.Join(staticDir, "files", "cv.pdf"))
 }

@@ -18,6 +18,8 @@ func main() {
 	mux.HandleFunc("/", pageHandler)
 	fileServer := http.FileServer(http.Dir("./static"))
 	mux.Handle("/static/", http.StripPrefix("/static", fileServer))
+	mux.HandleFunc("/angelcastaneda.asc", pgpHandler)
+	mux.HandleFunc("/pgp", pgpHandler)
 	mux.HandleFunc("/favicon.ico", faviconHandler)
 	mux.HandleFunc("/cv", cvHandler)
 	mux.HandleFunc("/claim-before.pdf", cbtsHandler)
