@@ -30,3 +30,14 @@ func gzipHandler(next http.Handler) http.Handler {
 		next.ServeHTTP(gzippedResponseWriter, r)
 	})
 }
+
+func redirectWWW(next http.Handler) http.Handler {
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		if !strings.HasPrefix(r.Host, "www.") && !strings.HasPrefix(r.Host, "en.") && !strings.HasPrefix(r.Host, "es.") && !strings.HasPrefix(r.Host, "de.") {
+			http.Redirect(w, r, scheme+"://www."+r.Host+r.RequestURI, 302)
+			return
+		}
+
+		next.ServeHTTP(w, r)
+	})
+}
