@@ -25,6 +25,6 @@ func main() {
 	mux.HandleFunc("/claim-before.pdf", cbtsHandler)
 
 	log.Println("Starting server on port ", *addr)
-	err := http.ListenAndServe(*addr, mux)
+	err := http.ListenAndServe(*addr, gzipHandler(mux))
 	log.Fatal(err)
 }
