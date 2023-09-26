@@ -21,7 +21,7 @@ func main() {
 	mux.HandleFunc("/angelcastaneda.asc", pgpHandler)
 	mux.HandleFunc("/pgp", pgpHandler)
 	mux.HandleFunc("/favicon.ico", faviconHandler)
-	mux.HandleFunc("/cv", cvHandler)
+	mux.HandleFunc("/cv.pdf", cvHandler)
 	mux.HandleFunc("/claim-before.pdf", cbtsHandler)
 
 	log.Println("Starting server on port ", *addr)
