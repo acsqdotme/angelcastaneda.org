@@ -293,6 +293,22 @@ a:active, a:hover  {
   display: none;
 }
 
+.notop {
+  margin-top: 0em;
+}
+
+.index {
+  padding-top: 15vh;
+  height: 75vh; 
+  padding-bottom: 10vh;
+}
+
+.index h1 {
+  font-size: 20vh;
+  text-align: right;
+  margin-bottom: 0em;
+}
+
 @media only screen and (max-width:650px) {
   .double {
     flex-direction: column;
