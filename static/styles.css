@@ -1,54 +1,45 @@
-/* @font-face { */
-/*   font-family: 'IBMPlexMono'; */
-/*   src:  */
-/*     local('IBM Plex Mono Regular'), */
-/*     url('/static/fonts/IBMPlexMono-Regular.woff') format('woff'); */
-/*   font-weight: normal; */
-/*   font-style: normal; */
-/* } */
-
-/* @font-face { */
-/*   font-family: 'IBMPlexMono'; */
-/*   src:  */
-/*     local('IBM Plex Mono Italic'), */
-/*     url('/static/fonts/IBMPlexMono-Italic.woff') format('woff'); */
-/*   font-weight: normal; */
-/*   font-style: italic; */
-/* } */
-
-/* @font-face { */
-/*   font-family: 'IBMPlexMono'; */
-/*   src:  */
-/*     local('IBM Plex Mono Bold'), */
-/*     url('/static/fonts/IBMPlexMono-Bold.woff') format('woff'); */
-/*   font-weight: bold; */
-/*   font-style: normal; */
-/* } */
-
-/* @font-face { */
-/*   font-family: 'IBMPlexMono'; */
-/*   src:  */
-/*     local('IBM Plex Mono Bold Italic'), */
-/*     url('/static/fonts/IBMPlexMono-BoldItalic.woff') format('woff'); */
-/*   font-weight: bold; */
-/*   font-style: italic; */
-/* } */
-
-:root {
-  --body-color: #000000;
-  --bg-color: #FFFFFF;
-  --hyperblue: #005F87;
-  --hoverorange: #D75F00;
-  --bg-code: #06363b;
+@font-face {
+  font-family: 'IBMPlexMono';
+  src: 
+    local('IBM Plex Mono Regular'),
+    url('/static/fonts/IBMPlexMono-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
-@media (prefers-color-scheme:dark) {
-  :root {
-    --bg-color: #001A1E;
-    --body-color: #FFFFFF;
-    --hyperblue: #7DCEF0;
-    --hoverorange: #FF7100;
-  }
+@font-face {
+  font-family: 'IBMPlexMono';
+  src: 
+    local('IBM Plex Mono Italic'),
+    url('/static/fonts/IBMPlexMono-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'IBMPlexMono';
+  src: 
+    local('IBM Plex Mono Bold'),
+    url('/static/fonts/IBMPlexMono-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'IBMPlexMono';
+  src: 
+    local('IBM Plex Mono Bold Italic'),
+    url('/static/fonts/IBMPlexMono-BoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+}
+
+:root {
+  --bg-code: #06363b;
+  --bg-color: #212529;
+  --body-color: #FFFFFF;
+  --hyperblue: #5DCFFF;
+  --hoverorange: #FF7100;
 }
 
 body {
