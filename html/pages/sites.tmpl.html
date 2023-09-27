@@ -1,12 +1,84 @@
 {{ define "title" }}Sites{{ end }}
 
 {{ define "main" }}
-<h3><a href="https://www.angel-castaneda.com" target="_blank" rel="noreferrer noopener">www.angel-castaneda.com</a></h3>
+<figure>
+  <a href="https://www.angel-castaneda.com" target="_blank" rel="noreferrer noopener">
+    <img src="/static/img/angel-castaneda.com.png" alt="screenshot of my personal site">
+  </a>
+</figure>
 
-<h3><a href="https://git.acsq.me" target="_blank" rel="noreferrer noopener">git.acsq.me</a></h3>
+<h3 class="center">
+  <a href="https://www.angel-castaneda.com" target="_blank" rel="noreferrer noopener">
+    www.angel-castaneda.com</a>
+</h3>
 
-<h3><a href="https://harrisonwarren.net" target="_blank" rel="noreferrer noopener">harrisonwarren.net</a></h3>
+<p>
+  Personal site and blog. Built on top of GO http and html/templating packages.
+</p>
 
-<h3><a href="https://citlalimelany.com" target="_blank" rel="noreferrer noopener">citlalimelany.com</a></h3>
+<p>Features:</p>
+<ul>
+  <li>
+    Multilingual content in
+    <a href="https://es.angel-castaneda.com" target="_blank" rel="noreferrer noopener">
+      Spanish</a>
+    and
+    <a href="https://de.angel-castaneda.com" target="_blank" rel="noreferrer noopener">
+      broken German</a>
+  </li>
+  <li>
+    <a href="https://www.angel-castaneda.com/atom.xml" target="_blank" rel="noreferrer noopener">
+      Atom feed</a>
+    for RSS readers to get instant notifications of new content
+  </li>
+  <li>
+    <a href="https://www.angel-castaneda.com/page/not/real" target="_blank" rel="noreferrer noopener">
+      Fancy Error Pages</a>
+    that return proper http code back
+  </li>
+  <li>
+    Continuous integration pipeline with git, cron, and shell scripting
+  </li>
+  <li>
+    Uses my own
+    <a href="https://git.acsq.me/dblog/about" target="_blank" rel="noreferrer noopener">
+      dblog</a>
+    package that uses a sqlite database to hold blog posts and thumbnails
+  </li>
+  <li>
+    Licensed under the GPLv3; View source code
+    <a href="https://git.acsq.me/angel-castaneda.com" target="_blank" rel="noreferrer noopener">
+      here</a>
+  </li>
+</ul>
 
+<figure>
+  <a href="https://harrisonwarren.net" target="_blank" rel="noreferrer noopener">
+    <img src="/static/img/angel-castaneda.com.png" alt="screenshot of my personal site">
+  </a>
+</figure>
+
+<h3 class="center">
+  <a href="https://harrisonwarren.net" target="_blank" rel="noreferrer noopener">
+    harrisonwarren.net</a>
+</h3>
+
+<p>
+  Personal site and blog. Built on top of GO http and html/templating packages.
+</p>
+
+<p>Features:</p>
+<ul>
+  <li>
+    Continuous integration pipeline with git, cron, and shell scripting
+  </li>
+  <li>
+    Personal email at <a href="mailto:me@harrisonwarren.net">me@harrisonwarren.net</a>
+  </li>
+  <li>
+    <a href="https://git.acsq.me/dblog/about" target="_blank" rel="noreferrer noopener">
+      BoltBD</a>
+    key value database
+  </li>
+</ul>
 {{ end }}
