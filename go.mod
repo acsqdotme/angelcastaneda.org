@@ -1,3 +1,3 @@
-module git.acsq.me/acsq.me
+module angelcastaneda.org
 
 go 1.21
